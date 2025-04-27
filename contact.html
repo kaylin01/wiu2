@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Untitled design.png" alt="Restaurant Logo" class="logo-img">
+        </div>
+        <nav>
+            <button class="hamburger" aria-label="Menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="nav-links">
+                <div class="mobile-menu-header">
+                    <div class="menu-title">Menu</div>
+                    <button class="close-menu">&times;</button>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="icon">📍</i>
+                    <p>123 Restaurant Street, Foodville, 10101</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">📞</i>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">📍</i>
+                    <p>123 Restaurant Street, Foodville, 10101</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">📞</i>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">📍</i>
+                    <p>123 Restaurant Street, Foodville, 10101</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">📞</i>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="icon">✉️</i>
+                    <p>info@restaurantname.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">TW</a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations">
+        <h2 class="section-title">Where to Find Us</h2>
+      
+        <div class="find-us container">
+          <div class="find-left">
+            <div class="location-tabs">
+              <button class="tab-btn active" data-map="pearls">Pearls</button>
+              <button class="tab-btn" data-map="musgrave">Musgrave</button>
+              <button class="tab-btn" data-map="gateway">Gateway</button>
+            </div>
+      
+            <div class="map-container">
+              <iframe id="location-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.794412369209!2d31.084542676203263!3d-29.725713916570687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70f0037fea68d%3A0x9fa71df065b4d495!2sWrap%20it%20up!5e0!3m2!1sen!2sza!4v1745624740627!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+      
+          <div class="find-right">
+            <a href="https://www.ubereats.com/za" target="_blank">
+              <img src="5f4921b668ecc70004ae7047.png" alt="Uber Eats" />
+            </a>
+            <a href="https://www.mrdfood.com/" target="_blank">
+              <img src="mr-d-food-logo-vector.png" alt="Mr D Food" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+    <footer class="footer-container">
+        <div class="footer-left">
+          <!-- Contact Info -->
+          <h4>Contact Us</h4>
+          <p>123 Main Street, Durban</p>
+          <p>Phone: 031 123 4567</p>
+          <p>Email: info@theflyingchick.co.za</p>
+        </div>
+      
+        <div class="footer-center">
+          <!-- Logo -->
+          <img src="Untitled design.png" alt="The Flying Chick Logo" class="footer-logo">
+        </div>
+      
+        <div class="footer-right">
+          <!-- Trading Times -->
+          <h4>Trading Hours</h4>
+          <p>Mon - Fri: 8am - 8pm</p>
+          <p>Sat: 9am - 10pm</p>
+          <p>Sun: 9am - 6pm</p>
+        </div>
+      </footer>
+</body>
+</html>
+
+<script>
+    // find us section 
+const mapFrame = document.getElementById("location-map");
+  const tabs = document.querySelectorAll(".tab-btn");
+
+  const mapSources = {
+    pearls: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.794412369209!2d31.084542676203263!3d-29.725713916570687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70f0037fea68d%3A0x9fa71df065b4d495!2sWrap%20it%20up!5e0!3m2!1sen!2sza!4v1745624740627!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade",
+    musgrave: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13844.202703500538!2d30.966525705496046!3d-29.83395900328678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef700b376ef934f%3A0xceca5835ed71394a!2sWRAP%20it%20UP%20caff%C3%A9!5e0!3m2!1sen!2sza!4v1745625397363!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade",
+    gateway: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.821691371829!2d30.991325076206422!3d-29.81169532052367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7072eecfde903%3A0x47ad86fd44f453f!2sWRAP%20it%20UP%20caff%C3%A9!5e0!3m2!1sen!2sza!4v1745625506117!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade"
+  };
+
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active from all
+      tabs.forEach(tab => tab.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Change map source
+      const selected = btn.getAttribute("data-map");
+      mapFrame.src = mapSources[selected];
+    });
+  });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const closeMenu = document.querySelector('.close-menu');
+        
+        // Toggle menu with hamburger button
+        hamburger.addEventListener('click', function() {
+            toggleMenu();
+        });
+        
+        // Close menu with X button
+        closeMenu.addEventListener('click', function() {
+            closeMenuFn();
+        });
+        
+        // Close menu when clicking on a link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                closeMenuFn();
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-links') && !event.target.closest('.hamburger') && navLinks.classList.contains('active')) {
+                closeMenuFn();
+            }
+        });
+        
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            toggleBodyScroll();
+        }
+        
+        function closeMenuFn() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            toggleBodyScroll();
+        }
+        
+        function toggleBodyScroll() {
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    });
+</script>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wrap It Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="Untitled design.png" alt="Restaurant Logo" class="logo-img">
+    </div>
+    <nav>
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="nav-links">
+            <div class="mobile-menu-header">
+                <div class="menu-title">Menu</div>
+                <button class="close-menu">&times;</button>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+  <section class="hero">
+    <div class="hero-bg bg1 active"></div>
+    <div class="hero-bg bg2"></div>
+    <div class="hero-bg bg3"></div>
+  
+    <!-- Text Layers -->
+    <div class="hero-text-container">
+      <div class="hero-text active" data-index="0">
+        <h1>FLAVOUR TAKES FLIGHT</h1>
+        <p>Where every bite is a journey of crispy chicken delight.</p>
+      </div>
+      <div class="hero-text" data-index="1">
+        <h1>CRISPY. GOLDEN. JUICY.</h1>
+        <p>Crafted with bold spices and cooked to perfection.</p>
+      </div>
+      <div class="hero-text" data-index="2">
+        <h1>DELIVERED HOT TO YOUR DOOR</h1>
+        <p>From our kitchen to your cravings, fast and fresh.</p>
+      </div>
+  
+      <!-- Constant CTA Button -->
+      <a href="#" class="btn order-now">Order Now</a>
+    </div>
+  </section>
+  
+  
+ <!-- featured dishes  -->
+
+  <section class="featured-dishes">
+    <h2>Featured Dishes</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&larr;</button>
+      <div class="carousel-track">
+        <div class="carousel">
+          
+        </div>
+      </div>
+      <button class="carousel-btn right">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- locations -->
+
+  <section class="locations">
+    <h2 class="section-title">Where to Find Us</h2>
+  
+    <div class="find-us container">
+      <div class="find-left">
+        <div class="location-tabs">
+          <button class="tab-btn active" data-map="pearls">Pearls</button>
+          <button class="tab-btn" data-map="musgrave">Musgrave</button>
+          <button class="tab-btn" data-map="gateway">Gateway</button>
+        </div>
+  
+        <div class="map-container">
+          <iframe id="location-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.794412369209!2d31.084542676203263!3d-29.725713916570687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70f0037fea68d%3A0x9fa71df065b4d495!2sWrap%20it%20up!5e0!3m2!1sen!2sza!4v1745624740627!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+  
+      <div class="find-right">
+        <a href="https://www.ubereats.com/za" target="_blank">
+          <img src="5f4921b668ecc70004ae7047.png" alt="Uber Eats" />
+        </a>
+        <a href="https://www.mrdfood.com/" target="_blank">
+          <img src="mr-d-food-logo-vector.png" alt="Mr D Food" />
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+
+  <footer class="footer-container">
+    <div class="footer-left">
+      <!-- Contact Info -->
+      <h4>Contact Us</h4>
+      <p>123 Main Street, Durban</p>
+      <p>Phone: 031 123 4567</p>
+      <p>Email: info@theflyingchick.co.za</p>
+    </div>
+  
+    <div class="footer-center">
+      <!-- Logo -->
+      <img src="Untitled design.png" alt="The Flying Chick Logo" class="footer-logo">
+    </div>
+  
+    <div class="footer-right">
+      <!-- Trading Times -->
+      <h4>Trading Hours</h4>
+      <p>Mon - Fri: 8am - 8pm</p>
+      <p>Sat: 9am - 10pm</p>
+      <p>Sun: 9am - 6pm</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
+<script>
+    // HERO SECTION ROTATION
+    const backgrounds = document.querySelectorAll('.hero-bg');
+    const texts = document.querySelectorAll('.hero-text');
+    const orderBtn = document.querySelector('.order-now');
+    let heroIndex = 0;
+  
+    function showSlide(index) {
+      backgrounds.forEach(bg => bg.classList.remove('active'));
+      backgrounds[index].classList.add('active');
+  
+      texts.forEach(text => text.classList.remove('active'));
+      texts[index].classList.add('active');
+  
+      orderBtn.classList.remove('show');
+      setTimeout(() => {
+        orderBtn.classList.add('show');
+      }, 300);
+    }
+  
+    showSlide(heroIndex);
+  
+    setInterval(() => {
+      heroIndex = (heroIndex + 1) % backgrounds.length;
+      showSlide(heroIndex);
+    }, 5000);
+  
+    // FEATURED DISHES CAROUSEL
+    const allDishes = [
+      { img: "pic1.jpg", name: "Hot Wings", desc: "Spicy crispy chicken wings." },
+      { img: "pic2.jpg", name: "Chicken Burger", desc: "Golden fried chicken breast." },
+      { img: "pic3.jpg", name: "Loaded Fries", desc: "Crunchy fries topped with chicken." },
+      { img: "pic4.jpg", name: "Chicken Strips", desc: "Tender, hand-breaded strips." },
+      { img: "pic5.jpg", name: "Zinger Box", desc: "All-in-one meal box." },
+    ];
+  
+    const carousel = document.querySelector(".carousel");
+    const leftBtn = document.querySelector(".carousel-btn.left");
+    const rightBtn = document.querySelector(".carousel-btn.right");
+  
+    let dishIndex = 0;
+
+// Helper function to check if it's mobile
+function isMobile() {
+  return window.innerWidth <= 768; // You can tweak 768px if you want
+}
+
+function renderDishes() {
+  carousel.innerHTML = '';
+
+  const first = allDishes[dishIndex];
+  
+  // Always render at least the first dish
+  carousel.innerHTML += `
+    <div class="dish-card">
+      <img src="${first.img}">
+      <h3>${first.name}</h3>
+      <p>${first.desc}</p>
+    </div>
+  `;
+
+  // If not mobile, also render the second dish
+  if (!isMobile()) {
+    const second = allDishes[(dishIndex + 1) % allDishes.length];
+    carousel.innerHTML += `
+      <div class="dish-card">
+        <img src="${second.img}">
+        <h3>${second.name}</h3>
+        <p>${second.desc}</p>
+      </div>
+    `;
+  }
+}
+
+function nextSlide() {
+  dishIndex = (dishIndex + 1) % allDishes.length;
+  renderDishes();
+}
+
+function prevSlide() {
+  dishIndex = (dishIndex - 1 + allDishes.length) % allDishes.length;
+  renderDishes();
+}
+
+leftBtn.addEventListener("click", prevSlide);
+rightBtn.addEventListener("click", nextSlide);
+
+// Re-render on window resize (important)
+window.addEventListener('resize', renderDishes);
+
+renderDishes();
+
+// find us section 
+const mapFrame = document.getElementById("location-map");
+  const tabs = document.querySelectorAll(".tab-btn");
+
+  const mapSources = {
+    pearls: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.794412369209!2d31.084542676203263!3d-29.725713916570687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70f0037fea68d%3A0x9fa71df065b4d495!2sWrap%20it%20up!5e0!3m2!1sen!2sza!4v1745624740627!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade",
+    musgrave: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13844.202703500538!2d30.966525705496046!3d-29.83395900328678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef700b376ef934f%3A0xceca5835ed71394a!2sWRAP%20it%20UP%20caff%C3%A9!5e0!3m2!1sen!2sza!4v1745625397363!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade",
+    gateway: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.821691371829!2d30.991325076206422!3d-29.81169532052367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7072eecfde903%3A0x47ad86fd44f453f!2sWRAP%20it%20UP%20caff%C3%A9!5e0!3m2!1sen!2sza!4v1745625506117!5m2!1sen!2sza' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade"
+  };
+
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active from all
+      tabs.forEach(tab => tab.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Change map source
+      const selected = btn.getAttribute("data-map");
+      mapFrame.src = mapSources[selected];
+    });
+  });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const closeMenu = document.querySelector('.close-menu');
+      
+      // Toggle menu with hamburger button
+      hamburger.addEventListener('click', function() {
+          toggleMenu();
+      });
+      
+      // Close menu with X button
+      closeMenu.addEventListener('click', function() {
+          closeMenuFn();
+      });
+      
+      // Close menu when clicking on a link
+      const navItems = document.querySelectorAll('.nav-links a');
+      navItems.forEach(item => {
+          item.addEventListener('click', function() {
+              closeMenuFn();
+          });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+          if (!event.target.closest('.nav-links') && !event.target.closest('.hamburger') && navLinks.classList.contains('active')) {
+              closeMenuFn();
+          }
+      });
+      
+      function toggleMenu() {
+          hamburger.classList.toggle('active');
+          navLinks.classList.toggle('active');
+          toggleBodyScroll();
+      }
+      
+      function closeMenuFn() {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+          toggleBodyScroll();
+      }
+      
+      function toggleBodyScroll() {
+          if (navLinks.classList.contains('active')) {
+              document.body.style.overflow = 'hidden';
+          } else {
+              document.body.style.overflow = '';
+          }
+      }
+  });
+</script>
+  
+  
